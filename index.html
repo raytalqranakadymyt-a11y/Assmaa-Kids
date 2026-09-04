@@ -1,0 +1,3149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Asmaa Kids | أكاديمية أسماء للأطفال</title>
+
+
+<link rel="icon" type="image/png" href="ar.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Cairo",sans-serif;
+    background:#fffaf7;
+    color:#222;
+    line-height:1.8;
+}
+
+:root{
+    --orange:#ff7b54;
+    --orange-dark:#ef6240;
+    --blue:#5b8def;
+    --purple:#8b6cf6;
+    --green:#25d366;
+    --cream:#fff7f1;
+    --white:#fff;
+    --dark:#222;
+    --muted:#777;
+    --border:#eee;
+    --shadow:0 15px 45px rgba(0,0,0,.08);
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #eee;
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    min-height:78px;
+    padding:10px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.brand{
+    text-decoration:none;
+    color:var(--dark);
+    font-size:22px;
+    font-weight:900;
+    white-space:nowrap;
+}
+
+.brand span{
+    color:var(--orange);
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.nav-links a{
+    color:#333;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--orange);
+}
+
+.nav-btn{
+    background:var(--orange);
+    color:white!important;
+    padding:10px 18px;
+    border-radius:12px;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+}
+
+.logo-upload-label{
+    width:155px;
+    height:58px;
+    border:2px dashed var(--orange);
+    border-radius:15px;
+    background:#fffaf7;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    cursor:pointer;
+    color:var(--orange);
+    font-size:13px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.logo-upload-label:hover{
+    transform:translateY(-2px);
+    box-shadow:0 7px 20px rgba(255,123,84,.18);
+}
+
+#logoPreview{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:none;
+}
+
+.menu-toggle{
+    display:none;
+    border:0;
+    background:#fff2ec;
+    color:var(--orange);
+    width:45px;
+    height:45px;
+    border-radius:12px;
+    font-size:23px;
+    cursor:pointer;
+}
+
+/* ================= GENERAL ================= */
+
+.container{
+    width:min(1150px,92%);
+    margin:auto;
+}
+
+section{
+    padding:85px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:35px;
+    font-weight:900;
+    margin-bottom:8px;
+}
+
+.section-title p{
+    color:var(--muted);
+    max-width:650px;
+    margin:auto;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border:none;
+    cursor:pointer;
+    text-decoration:none;
+    font-family:inherit;
+    font-weight:800;
+    padding:13px 22px;
+    border-radius:14px;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:var(--orange);
+    color:white;
+}
+
+.btn-primary:hover{
+    background:var(--orange-dark);
+    transform:translateY(-2px);
+}
+
+.btn-blue{
+    background:var(--blue);
+    color:white;
+}
+
+.btn-green{
+    background:var(--green);
+    color:white;
+}
+
+.btn-light{
+    background:white;
+    color:var(--orange);
+    border:1px solid #eee;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    border:1px solid #e5e5e5;
+    background:#fff;
+    padding:14px 15px;
+    border-radius:12px;
+    outline:none;
+    font-family:inherit;
+    font-size:14px;
+    transition:.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:var(--orange);
+    box-shadow:0 0 0 3px rgba(255,123,84,.1);
+}
+
+textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+label{
+    display:block;
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:7px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    padding:80px 0;
+    background:
+        radial-gradient(circle at 10% 20%,rgba(255,123,84,.13),transparent 30%),
+        radial-gradient(circle at 90% 70%,rgba(91,141,239,.14),transparent 30%),
+        #fffaf7;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    align-items:center;
+    gap:50px;
+}
+
+.hero-badge{
+    display:inline-block;
+    background:#fff0e9;
+    color:var(--orange-dark);
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:55px;
+    line-height:1.2;
+    font-weight:900;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:var(--orange);
+}
+
+.hero p{
+    color:#666;
+    font-size:17px;
+    max-width:620px;
+    margin-bottom:28px;
+}
+
+.hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.hero-card{
+    min-height:390px;
+    border-radius:35px;
+    background:linear-gradient(145deg,#ffeadf,#eaf1ff);
+    box-shadow:var(--shadow);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-circle{
+    width:245px;
+    height:245px;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:110px;
+    box-shadow:0 20px 45px rgba(0,0,0,.1);
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    padding:30px 0;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.stat{
+    background:white;
+    border-radius:20px;
+    padding:25px 15px;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+
+.stat strong{
+    display:block;
+    color:var(--orange);
+    font-size:27px;
+    font-weight:900;
+}
+
+.stat span{
+    color:#777;
+    font-size:13px;
+    font-weight:700;
+}
+
+/* ================= PROGRAMS ================= */
+
+.programs{
+    background:#fff;
+}
+
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.program-card{
+    background:#fffaf7;
+    border:1px solid #f3e7df;
+    padding:30px;
+    border-radius:25px;
+    transition:.3s;
+}
+
+.program-card:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow);
+}
+
+.program-icon{
+    width:65px;
+    height:65px;
+    border-radius:18px;
+    background:#fff0e9;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:31px;
+    margin-bottom:18px;
+}
+
+.program-card h3{
+    margin-bottom:8px;
+}
+
+.program-card p{
+    color:#777;
+    font-size:14px;
+}
+
+/* ================= TEACHERS ================= */
+
+.teachers-section{
+    background:#f7f9ff;
+}
+
+.teacher-tools{
+    max-width:500px;
+    margin:0 auto 35px;
+}
+
+.teacher-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.teacher-card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.teacher-card:hover{
+    transform:translateY(-7px);
+}
+
+.teacher-photo{
+    height:220px;
+    background:linear-gradient(135deg,#ffe8dd,#e7efff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:85px;
+    overflow:hidden;
+}
+
+.teacher-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.teacher-info{
+    padding:24px;
+}
+
+.teacher-info h3{
+    font-size:20px;
+    margin-bottom:5px;
+}
+
+.teacher-specialty{
+    color:var(--orange);
+    font-size:13px;
+    font-weight:800;
+}
+
+.teacher-info p{
+    color:#777;
+    font-size:13px;
+    margin:12px 0 18px;
+}
+
+.teacher-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-bottom:18px;
+}
+
+.teacher-tag{
+    background:#f3f5ff;
+    color:#596fae;
+    padding:5px 9px;
+    border-radius:8px;
+    font-size:11px;
+    font-weight:700;
+}
+
+/* ================= FORMS ================= */
+
+.form-section{
+    background:#fff;
+}
+
+.form-box{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:28px;
+    box-shadow:var(--shadow);
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.full{
+    grid-column:1/-1;
+}
+
+.form-submit{
+    margin-top:20px;
+    width:100%;
+}
+
+.upload-box{
+    border:2px dashed #ddd;
+    padding:18px;
+    border-radius:15px;
+    text-align:center;
+    background:#fafafa;
+}
+
+.upload-preview{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:12px auto;
+    display:none;
+}
+
+/* ================= RECEIPT ================= */
+
+.receipt-box{
+    border:2px dashed #ddd;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    background:#fafafa;
+}
+
+.receipt-preview{
+    width:100%;
+    max-width:380px;
+    max-height:420px;
+    object-fit:contain;
+    border-radius:15px;
+    margin:18px auto;
+    display:none;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+    background:white;
+}
+
+.receipt-success{
+    color:#20a65a;
+    font-weight:800;
+    font-size:13px;
+    margin-top:8px;
+}
+
+/* ================= PRICING ================= */
+
+.pricing{
+    background:#fffaf7;
+}
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.price-card{
+    background:white;
+    border:1px solid #eee;
+    border-radius:25px;
+    padding:30px;
+    box-shadow:var(--shadow);
+    position:relative;
+}
+
+.price-card.featured{
+    border:2px solid var(--orange);
+    transform:translateY(-8px);
+}
+
+.popular{
+    position:absolute;
+    top:-15px;
+    right:25px;
+    background:var(--orange);
+    color:white;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:800;
+}
+
+.price{
+    font-size:36px;
+    font-weight:900;
+    color:var(--orange);
+    margin:15px 0;
+}
+
+.price small{
+    font-size:14px;
+    color:#777;
+}
+
+.features{
+    list-style:none;
+    margin:20px 0;
+}
+
+.features li{
+    padding:7px 0;
+    font-size:13px;
+    color:#666;
+}
+
+.features li::before{
+    content:"✓";
+    color:#25b765;
+    font-weight:900;
+    margin-left:8px;
+}
+
+/* ================= INSTAPAY ================= */
+
+.payment-section{
+    background:#f7f9ff;
+}
+
+.payment-box{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    border-radius:30px;
+    padding:35px;
+    box-shadow:var(--shadow);
+}
+
+.instapay-card{
+    background:linear-gradient(135deg,#5b8def,#7b68ee);
+    color:white;
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.instapay-icon{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.instapay-number{
+    direction:ltr;
+    display:inline-block;
+    font-size:30px;
+    font-weight:900;
+    letter-spacing:1px;
+    margin:10px 0 18px;
+}
+
+.copy-btn{
+    background:white;
+    color:#4f72cf;
+    border:0;
+    padding:11px 20px;
+    border-radius:12px;
+    font-family:inherit;
+    font-weight:800;
+    cursor:pointer;
+}
+
+/* ================= BOOKING ================= */
+
+.booking{
+    background:white;
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonials{
+    background:#fffaf7;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.testimonial{
+    background:white;
+    padding:25px;
+    border-radius:22px;
+    box-shadow:var(--shadow);
+}
+
+.stars{
+    color:#ffb300;
+    margin-bottom:10px;
+}
+
+.testimonial p{
+    color:#666;
+    font-size:14px;
+}
+
+/* ================= LOGIN ================= */
+
+.login-section{
+    background:#f7f9ff;
+}
+
+.login-box{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+}
+
+.login-box .field{
+    margin-bottom:18px;
+}
+
+/* ================= FAQ ================= */
+
+.faq-list{
+    max-width:850px;
+    margin:auto;
+}
+
+details{
+    background:white;
+    margin-bottom:12px;
+    padding:18px 22px;
+    border-radius:16px;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+summary{
+    cursor:pointer;
+    font-weight:800;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    padding:70px 0;
+}
+
+.cta-box{
+    background:linear-gradient(135deg,#ff7b54,#ff9878);
+    color:white;
+    padding:50px;
+    border-radius:35px;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+
+.cta-box h2{
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+.cta-box p{
+    opacity:.95;
+    margin-bottom:22px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#202020;
+    color:white;
+    padding:50px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+    margin-bottom:35px;
+}
+
+footer h3{
+    margin-bottom:12px;
+}
+
+footer p,
+footer a{
+    color:#bbb;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+
+.copyright{
+    border-top:1px solid #333;
+    padding-top:20px;
+    text-align:center;
+    color:#888;
+    font-size:12px;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25d366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    text-decoration:none;
+    z-index:900;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+/* ================= ANIMATION ================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:.7s;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:none;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        position:absolute;
+        top:78px;
+        right:0;
+        width:100%;
+        background:white;
+        padding:20px;
+        display:none;
+        flex-direction:column;
+        border-bottom:1px solid #eee;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .logo-upload-label{
+        width:115px;
+        height:48px;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .program-grid,
+    .teacher-grid,
+    .pricing-grid,
+    .testimonial-grid{
+        grid-template-columns:1fr;
+    }
+
+    .price-card.featured{
+        transform:none;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:550px){
+
+    section{
+        padding:60px 0;
+    }
+
+    .nav-container{
+        padding:8px 12px;
+    }
+
+    .brand{
+        font-size:18px;
+    }
+
+    .logo-upload-label{
+        width:95px;
+        font-size:10px;
+    }
+
+    .hero{
+        padding:55px 0;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .hero-card{
+        min-height:280px;
+    }
+
+    .hero-circle{
+        width:180px;
+        height:180px;
+        font-size:75px;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+
+    .form-box,
+    .payment-box{
+        padding:22px;
+    }
+
+    .cta-box{
+        padding:35px 20px;
+    }
+
+    .cta-box h2{
+        font-size:27px;
+    }
+
+    .instapay-number{
+        font-size:22px;
+    }
+
+    .receipt-preview{
+        max-height:300px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+<div class="nav-container">
+
+<a href="#home" class="brand">
+Asmaa <span>Kids</span> 🌸
+</a>
+
+<div class="logo-area">
+
+<label for="logoInput" class="logo-upload-label">
+
+<span id="logoText">
+📷 ارفع صورة اللوجو
+</span>
+
+<img
+id="logoPreview"
+src=""
+alt="شعار Asmaa Kids"
+>
+
+</label>
+
+<input
+type="file"
+id="logoInput"
+accept="image/png,image/jpeg,image/webp,image/svg+xml"
+hidden
+>
+
+</div>
+
+<button
+class="menu-toggle"
+id="menuToggle"
+>
+☰
+</button>
+
+<div
+class="nav-links"
+id="navLinks"
+>
+
+<a href="#home">الرئيسية</a>
+<a href="#programs">البرامج</a>
+<a href="#teachers">المعلمون</a>
+<a href="#pricing">الأسعار</a>
+<a href="#payment">الدفع</a>
+<a href="#booking">التسجيل</a>
+<a href="#teacher-register">انضم كمعلم</a>
+<a href="#login" class="nav-btn">دخول</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div class="reveal">
+
+<span class="hero-badge">
+🌸 تعليم ممتع وآمن للأطفال
+</span>
+
+<h1>
+مرحبًا بكم في
+<span>Asmaa Kids</span>
+</h1>
+
+<p>
+أكاديمية تعليمية للأطفال تجمع بين التعلم،
+المتابعة، التفاعل، والمعلمين المتميزين
+في بيئة تعليمية بسيطة وممتعة.
+</p>
+
+<div class="hero-actions">
+
+<a href="#booking" class="btn btn-primary">
+🚀 سجّل الآن
+</a>
+
+<a href="#programs" class="btn btn-light">
+📚 اكتشف البرامج
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-card reveal">
+
+<div class="hero-circle">
+🌸
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat reveal">
+<strong>4</strong>
+<span>حصص شهريًا</span>
+</div>
+
+<div class="stat reveal">
+<strong>8</strong>
+<span>حصص شهريًا</span>
+</div>
+
+<div class="stat reveal">
+<strong>12</strong>
+<span>حصة لمدة شهرين</span>
+</div>
+
+<div class="stat reveal">
+<strong>30</strong>
+<span>دقيقة للحلقة</span>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROGRAMS ================= -->
+
+<section id="programs" class="programs">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+برامجنا التعليمية 📚
+</h2>
+
+<p>
+برامج مصممة للأطفال بطريقة مبسطة
+ومناسبة لأعمارهم ومستوياتهم.
+</p>
+
+</div>
+
+<div class="program-grid">
+
+<div class="program-card reveal">
+
+<div class="program-icon">
+📖
+</div>
+
+<h3>
+القرآن الكريم
+</h3>
+
+<p>
+تعليم القرآن الكريم ومساعدة الطفل
+على الحفظ والمراجعة بطريقة مناسبة.
+</p>
+
+</div>
+
+
+<div class="program-card reveal">
+
+<div class="program-icon">
+📝
+</div>
+
+<h3>
+اللغة العربية
+</h3>
+
+<p>
+تقوية القراءة والكتابة واللغة العربية
+بأسلوب بسيط وممتع للأطفال.
+</p>
+
+</div>
+
+
+<div class="program-card reveal">
+
+<div class="program-icon">
+🕌
+</div>
+
+<h3>
+الإسلاميات
+</h3>
+
+<p>
+تعريف الأطفال بالمعلومات الإسلامية
+والقيم والسلوكيات بطريقة مناسبة.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TEACHERS ================= -->
+
+<section id="teachers" class="teachers-section">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+معلمو Asmaa Kids 👨‍🏫
+</h2>
+
+<p>
+تعرف على فريق المعلمين والتخصصات التي يقدمونها.
+</p>
+
+</div>
+
+<div class="teacher-tools">
+
+<select id="teacherFilter">
+
+<option value="all">
+كل التخصصات
+</option>
+
+<option value="القرآن الكريم">
+القرآن الكريم
+</option>
+
+<option value="اللغة العربية">
+اللغة العربية
+</option>
+
+<option value="الإسلاميات">
+الإسلاميات
+</option>
+
+</select>
+
+</div>
+
+
+<div class="teacher-grid" id="teacherGrid">
+
+
+<div
+class="teacher-card reveal teacher-item"
+data-specialty="القرآن الكريم"
+>
+
+<div class="teacher-photo">
+👩‍🏫
+</div>
+
+<div class="teacher-info">
+
+<h3>
+معلمة القرآن الكريم
+</h3>
+
+<div class="teacher-specialty">
+القرآن الكريم
+</div>
+
+<p>
+متخصصة في تعليم وتحفيظ القرآن الكريم
+للأطفال بأسلوب مبسط.
+</p>
+
+<div class="teacher-tags">
+
+<span class="teacher-tag">
+تحفيظ
+</span>
+
+<span class="teacher-tag">
+مراجعة
+</span>
+
+<span class="teacher-tag">
+أطفال
+</span>
+
+</div>
+
+<a
+class="btn btn-green"
+target="_blank"
+href="https://wa.me/201100258950?text=مرحبًا، أريد الاستفسار عن حجز حصة مع معلمة القرآن الكريم"
+>
+💬 احجز مع المعلمة
+</a>
+
+</div>
+
+</div>
+
+
+<div
+class="teacher-card reveal teacher-item"
+data-specialty="اللغة العربية"
+>
+
+<div class="teacher-photo">
+👩‍🏫
+</div>
+
+<div class="teacher-info">
+
+<h3>
+معلمة اللغة العربية
+</h3>
+
+<div class="teacher-specialty">
+اللغة العربية
+</div>
+
+<p>
+تساعد الأطفال على تحسين القراءة
+والكتابة والمهارات اللغوية.
+</p>
+
+<div class="teacher-tags">
+
+<span class="teacher-tag">
+قراءة
+</span>
+
+<span class="teacher-tag">
+كتابة
+</span>
+
+<span class="teacher-tag">
+لغة عربية
+</span>
+
+</div>
+
+<a
+class="btn btn-green"
+target="_blank"
+href="https://wa.me/201100258950?text=مرحبًا، أريد الاستفسار عن حجز حصة مع معلمة اللغة العربية"
+>
+💬 احجز مع المعلمة
+</a>
+
+</div>
+
+</div>
+
+
+<div
+class="teacher-card reveal teacher-item"
+data-specialty="الإسلاميات"
+>
+
+<div class="teacher-photo">
+👩‍🏫
+</div>
+
+<div class="teacher-info">
+
+<h3>
+معلمة الإسلاميات
+</h3>
+
+<div class="teacher-specialty">
+الإسلاميات
+</div>
+
+<p>
+تعليم الأطفال المبادئ والقيم الإسلامية
+بأسلوب بسيط ومناسب لأعمارهم.
+</p>
+
+<div class="teacher-tags">
+
+<span class="teacher-tag">
+إسلاميات
+</span>
+
+<span class="teacher-tag">
+قيم
+</span>
+
+<span class="teacher-tag">
+أطفال
+</span>
+
+</div>
+
+<a
+class="btn btn-green"
+target="_blank"
+href="https://wa.me/201100258950?text=مرحبًا، أريد الاستفسار عن حجز حصة مع معلمة الإسلاميات"
+>
+💬 احجز مع المعلمة
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TEACHER REGISTER ================= -->
+
+<section
+id="teacher-register"
+class="form-section"
+>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+انضم إلى فريق Asmaa Kids 👩‍🏫
+</h2>
+
+<p>
+هل أنت معلم أو معلمة؟ أرسل بياناتك لفريق الأكاديمية.
+</p>
+
+</div>
+
+
+<div class="form-box reveal">
+
+<form id="teacherForm">
+
+<div class="form-grid">
+
+
+<div>
+
+<label>
+اسم المعلم / المعلمة
+</label>
+
+<input
+type="text"
+id="teacherName"
+required
+placeholder="اكتب الاسم بالكامل"
+>
+
+</div>
+
+
+<div>
+
+<label>
+رقم الهاتف
+</label>
+
+<input
+type="tel"
+id="teacherPhone"
+required
+placeholder="01xxxxxxxxx"
+>
+
+</div>
+
+
+<div>
+
+<label>
+البريد الإلكتروني
+</label>
+
+<input
+type="email"
+id="teacherEmail"
+placeholder="example@email.com"
+>
+
+</div>
+
+
+<div>
+
+<label>
+التخصص
+</label>
+
+<select
+id="teacherSpecialty"
+required
+>
+
+<option value="">
+اختر التخصص
+</option>
+
+<option>
+القرآن الكريم
+</option>
+
+<option>
+اللغة العربية
+</option>
+
+<option>
+الإسلاميات
+</option>
+
+<option>
+تخصص آخر
+</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label>
+سنوات الخبرة
+</label>
+
+<input
+type="number"
+id="teacherExperience"
+min="0"
+placeholder="مثال: 3"
+>
+
+</div>
+
+
+<div>
+
+<label>
+المؤهلات
+</label>
+
+<input
+type="text"
+id="teacherQualifications"
+placeholder="المؤهل أو الشهادات"
+>
+
+</div>
+
+
+<div class="full">
+
+<label>
+نبذة عنك وخبرتك
+</label>
+
+<textarea
+id="teacherBio"
+placeholder="اكتب نبذة مختصرة عن خبرتك وطريقة التدريس..."
+></textarea>
+
+</div>
+
+
+<div class="full">
+
+<label>
+الصورة الشخصية
+</label>
+
+<div class="upload-box">
+
+<input
+type="file"
+id="teacherPhoto"
+accept="image/*"
+>
+
+<img
+id="teacherPhotoPreview"
+class="upload-preview"
+alt="صورة المعلم"
+>
+
+<p style="font-size:12px;color:#777">
+اختياري — اختر صورة واضحة من جهازك
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<button
+class="btn btn-primary form-submit"
+type="submit"
+>
+📩 إرسال طلب الانضمام
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PRICING ================= -->
+
+<section
+id="pricing"
+class="pricing"
+>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+الباقات والأسعار 💰
+</h2>
+
+<p>
+اختر الباقة المناسبة لطفلك وابدأ رحلة التعلم.
+</p>
+
+</div>
+
+
+<div class="pricing-grid">
+
+
+<div class="price-card reveal">
+
+<h3>
+الباقة الأساسية
+</h3>
+
+<div class="price">
+600 <small>ليرة</small>
+</div>
+
+<ul class="features">
+
+<li>
+4 حصص شهريًا
+</li>
+
+<li>
+30 دقيقة للحصة
+</li>
+
+<li>
+تعليم أونلاين
+</li>
+
+<li>
+متابعة الطفل
+</li>
+
+<li>
+مناسبة للأطفال
+</li>
+
+</ul>
+
+<a
+href="#booking"
+class="btn btn-primary"
+>
+اختيار الباقة
+</a>
+
+</div>
+
+
+<div class="price-card featured reveal">
+
+<span class="popular">
+الأكثر اختيارًا ⭐
+</span>
+
+<h3>
+الباقة المتوسطة
+</h3>
+
+<div class="price">
+850 <small>ليرة</small>
+</div>
+
+<ul class="features">
+
+<li>
+8 حصص شهريًا
+</li>
+
+<li>
+30 دقيقة للحصة
+</li>
+
+<li>
+تعليم أونلاين
+</li>
+
+<li>
+متابعة الطفل
+</li>
+
+<li>
+مناسبة للأطفال
+</li>
+
+</ul>
+
+<a
+href="#booking"
+class="btn btn-primary"
+>
+اختيار الباقة
+</a>
+
+</div>
+
+
+<div class="price-card reveal">
+
+<h3>
+الباقة الممتدة
+</h3>
+
+<div class="price">
+1150 <small>ليرة</small>
+</div>
+
+<ul class="features">
+
+<li>
+12 حصة لمدة شهرين
+</li>
+
+<li>
+30 دقيقة للحصة
+</li>
+
+<li>
+تعليم أونلاين
+</li>
+
+<li>
+متابعة الطفل
+</li>
+
+<li>
+مناسبة للأطفال
+</li>
+
+</ul>
+
+<a
+href="#booking"
+class="btn btn-primary"
+>
+اختيار الباقة
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PAYMENT ================= -->
+
+<section
+id="payment"
+class="payment-section"
+>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+الدفع عبر InstaPay 💳
+</h2>
+
+<p>
+حوّل قيمة الباقة ثم أرسل بيانات العملية للأكاديمية.
+</p>
+
+</div>
+
+
+<div class="payment-box reveal">
+
+
+<div class="instapay-card">
+
+<div class="instapay-icon">
+💳
+</div>
+
+<h3>
+InstaPay
+</h3>
+
+<p>
+رقم التحويل
+</p>
+
+<div class="instapay-number">
+01100258950
+</div>
+
+<br>
+
+<button
+class="copy-btn"
+id="copyInstapay"
+type="button"
+>
+📋 نسخ الرقم
+</button>
+
+</div>
+
+
+<form id="paymentForm">
+
+<div class="form-grid">
+
+
+<div>
+
+<label>
+اسم الطالب
+</label>
+
+<input
+type="text"
+id="paymentStudent"
+required
+placeholder="اسم الطالب"
+>
+
+</div>
+
+
+<div>
+
+<label>
+اسم ولي الأمر
+</label>
+
+<input
+type="text"
+id="paymentParent"
+required
+placeholder="اسم ولي الأمر"
+>
+
+</div>
+
+
+<div>
+
+<label>
+رقم ولي الأمر
+</label>
+
+<input
+type="tel"
+id="paymentPhone"
+required
+placeholder="01xxxxxxxxx"
+>
+
+</div>
+
+
+<div>
+
+<label>
+الباقة
+</label>
+
+<select
+id="paymentPackage"
+required
+>
+
+<option value="">
+اختر الباقة
+</option>
+
+<option>
+4 حصص شهريًا - 600 ليرة
+</option>
+
+<option>
+8 حصص شهريًا - 850 ليرة
+</option>
+
+<option>
+12 حصة لمدة شهرين - 1150 ليرة
+</option>
+
+</select>
+
+</div>
+
+
+<div class="full">
+
+<label>
+📸 صورة إيصال التحويل
+</label>
+
+<div class="receipt-box">
+
+<input
+type="file"
+id="receipt"
+accept="image/*"
+required
+>
+
+<img
+id="receiptPreview"
+class="receipt-preview"
+alt="صورة إيصال التحويل"
+>
+
+<p
+id="receiptText"
+style="font-size:12px;color:#777;margin-top:10px"
+>
+اختر صورة الإيصال من جهازك
+</p>
+
+<div
+id="receiptSuccess"
+class="receipt-success"
+></div>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<button
+type="submit"
+class="btn btn-primary form-submit"
+>
+📤 إرسال الإيصال وبيانات الدفع
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= BOOKING ================= -->
+
+<section
+id="booking"
+class="booking"
+>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+تسجيل الطالب 👦
+</h2>
+
+<p>
+املأ البيانات وسنتواصل معك لتأكيد التسجيل.
+</p>
+
+</div>
+
+
+<div class="form-box reveal">
+
+<form id="studentForm">
+
+<div class="form-grid">
+
+
+<div>
+
+<label>
+اسم الطالب
+</label>
+
+<input
+type="text"
+id="studentName"
+required
+placeholder="اسم الطفل"
+>
+
+</div>
+
+
+<div>
+
+<label>
+اسم ولي الأمر
+</label>
+
+<input
+type="text"
+id="parentName"
+required
+placeholder="اسم ولي الأمر"
+>
+
+</div>
+
+
+<div>
+
+<label>
+رقم الهاتف
+</label>
+
+<input
+type="tel"
+id="studentPhone"
+required
+placeholder="01xxxxxxxxx"
+>
+
+</div>
+
+
+<div>
+
+<label>
+البرنامج
+</label>
+
+<select
+id="studentProgram"
+required
+>
+
+<option value="">
+اختر البرنامج
+</option>
+
+<option>
+القرآن الكريم
+</option>
+
+<option>
+اللغة العربية
+</option>
+
+<option>
+الإسلاميات
+</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label>
+الباقة
+</label>
+
+<select
+id="studentPackage"
+required
+>
+
+<option value="">
+اختر الباقة
+</option>
+
+<option>
+4 حصص شهريًا - 600 ليرة
+</option>
+
+<option>
+8 حصص شهريًا - 850 ليرة
+</option>
+
+<option>
+12 حصة لمدة شهرين - 1150 ليرة
+</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label>
+العمر
+</label>
+
+<input
+type="number"
+id="studentAge"
+min="3"
+max="18"
+placeholder="عمر الطفل"
+>
+
+</div>
+
+
+<div class="full">
+
+<label>
+ملاحظات
+</label>
+
+<textarea
+id="studentNotes"
+placeholder="أي معلومات إضافية عن الطفل..."
+></textarea>
+
+</div>
+
+
+</div>
+
+
+<button
+type="submit"
+class="btn btn-primary form-submit"
+>
+🚀 إرسال طلب التسجيل
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TESTIMONIALS ================= -->
+
+<section class="testimonials">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+آراء أولياء الأمور ⭐
+</h2>
+
+<p>
+نماذج تجريبية يمكن استبدالها بآراء حقيقية.
+</p>
+
+</div>
+
+
+<div class="testimonial-grid">
+
+
+<div class="testimonial reveal">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"تجربة تعليمية جميلة ومنظمة، والطفل أصبح أكثر اهتمامًا بالتعلم."
+</p>
+
+</div>
+
+
+<div class="testimonial reveal">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"طريقة الشرح بسيطة ومناسبة للأطفال، والمتابعة ممتازة."
+</p>
+
+</div>
+
+
+<div class="testimonial reveal">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"الموقع سهل والتسجيل سريع، ونأمل أن تكون الرحلة التعليمية مميزة."
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= LOGIN ================= -->
+
+<section
+id="login"
+class="login-section"
+>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+تسجيل الدخول 🔐
+</h2>
+
+<p>
+ادخل إلى حسابك لمتابعة بياناتك.
+</p>
+
+</div>
+
+
+<div class="login-box reveal">
+
+<form id="loginForm">
+
+<div class="field">
+
+<label>
+البريد الإلكتروني
+</label>
+
+<input
+type="email"
+required
+placeholder="البريد الإلكتروني"
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+كلمة المرور
+</label>
+
+<input
+type="password"
+required
+placeholder="كلمة المرور"
+>
+
+</div>
+
+
+<button
+type="submit"
+class="btn btn-primary"
+style="width:100%"
+>
+تسجيل الدخول
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section id="faq">
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+الأسئلة الشائعة ❓
+</h2>
+
+</div>
+
+
+<div class="faq-list">
+
+
+<details class="reveal">
+
+<summary>
+هل الدراسة أونلاين؟
+</summary>
+
+<p>
+نعم، الحصص تتم أونلاين حسب المواعيد المتفق عليها.
+</p>
+
+</details>
+
+
+<details class="reveal">
+
+<summary>
+كم مدة الحصة؟
+</summary>
+
+<p>
+مدة الحلقة 30 دقيقة.
+</p>
+
+</details>
+
+
+<details class="reveal">
+
+<summary>
+كيف يتم الدفع؟
+</summary>
+
+<p>
+يمكن التحويل عبر InstaPay على الرقم
+01100258950 ثم إرسال صورة الإيصال.
+</p>
+
+</details>
+
+
+<details class="reveal">
+
+<summary>
+هل يمكن اختيار المعلم؟
+</summary>
+
+<p>
+يمكن التواصل مع الأكاديمية لمعرفة المعلمين المتاحين
+والتخصص المناسب للطفل.
+</p>
+
+</details>
+
+
+<details class="reveal">
+
+<summary>
+هل يمكن للمعلم التقديم للعمل؟
+</summary>
+
+<p>
+نعم، يوجد نموذج "انضم إلى فريق Asmaa Kids"
+داخل الموقع لإرسال بيانات المعلم.
+</p>
+
+</details>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box reveal">
+
+<h2>
+جاهزين نبدأ رحلة التعلم؟ 🌸
+</h2>
+
+<p>
+سجّل طفلك الآن وابدأ مع Asmaa Kids.
+</p>
+
+<a
+href="#booking"
+class="btn btn-light"
+>
+ابدأ التسجيل 🚀
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>
+Asmaa Kids 🌸
+</h3>
+
+<p>
+أكاديمية تعليمية تهدف إلى تقديم
+تجربة تعليمية ممتعة وآمنة للأطفال.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+روابط سريعة
+</h3>
+
+<div class="footer-links">
+
+<a href="#home">
+الرئيسية
+</a>
+
+<a href="#programs">
+البرامج
+</a>
+
+<a href="#teachers">
+المعلمون
+</a>
+
+<a href="#pricing">
+الأسعار
+</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h3>
+تواصل معنا
+</h3>
+
+<div class="footer-links">
+
+<a href="tel:01100258950">
+01100258950
+</a>
+
+<a
+target="_blank"
+href="https://wa.me/201100258950"
+>
+واتساب
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Asmaa Kids — جميع الحقوق محفوظة
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+class="whatsapp"
+target="_blank"
+href="https://wa.me/201100258950"
+aria-label="WhatsApp"
+>
+💬
+</a>
+
+
+<script>
+
+/* ================= MOBILE MENU ================= */
+
+const menuToggle =
+document.getElementById("menuToggle");
+
+const navLinks =
+document.getElementById("navLinks");
+
+menuToggle.addEventListener(
+"click",
+function(){
+
+navLinks.classList.toggle("active");
+
+});
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(link=>{
+
+link.addEventListener(
+"click",
+()=>{
+navLinks.classList.remove("active");
+}
+);
+
+});
+
+
+/* ================= LOGO UPLOAD ================= */
+
+const logoInput =
+document.getElementById("logoInput");
+
+const logoPreview =
+document.getElementById("logoPreview");
+
+const logoText =
+document.getElementById("logoText");
+
+logoInput.addEventListener(
+"change",
+function(){
+
+const file =
+this.files[0];
+
+if(!file){
+return;
+}
+
+if(!file.type.startsWith("image/")){
+
+alert("من فضلك اختر صورة فقط.");
+
+this.value="";
+
+return;
+
+}
+
+const reader =
+new FileReader();
+
+reader.onload =
+function(event){
+
+logoPreview.src =
+event.target.result;
+
+logoPreview.style.display =
+"block";
+
+logoText.style.display =
+"none";
+
+};
+
+reader.readAsDataURL(file);
+
+});
+
+
+/* ================= TEACHER PHOTO ================= */
+
+const teacherPhoto =
+document.getElementById("teacherPhoto");
+
+const teacherPhotoPreview =
+document.getElementById("teacherPhotoPreview");
+
+teacherPhoto.addEventListener(
+"change",
+function(){
+
+const file =
+this.files[0];
+
+if(!file){
+return;
+}
+
+if(!file.type.startsWith("image/")){
+
+alert("من فضلك اختر صورة فقط.");
+
+this.value="";
+
+return;
+
+}
+
+const reader =
+new FileReader();
+
+reader.onload =
+function(event){
+
+teacherPhotoPreview.src =
+event.target.result;
+
+teacherPhotoPreview.style.display =
+"block";
+
+};
+
+reader.readAsDataURL(file);
+
+});
+
+
+/* ================= RECEIPT PREVIEW ================= */
+
+const receiptInput =
+document.getElementById("receipt");
+
+const receiptPreview =
+document.getElementById("receiptPreview");
+
+const receiptText =
+document.getElementById("receiptText");
+
+const receiptSuccess =
+document.getElementById("receiptSuccess");
+
+
+receiptInput.addEventListener(
+"change",
+function(){
+
+const file =
+this.files[0];
+
+if(!file){
+
+receiptPreview.style.display =
+"none";
+
+receiptSuccess.textContent =
+"";
+
+receiptText.textContent =
+"اختر صورة الإيصال من جهازك";
+
+return;
+
+}
+
+if(!file.type.startsWith("image/")){
+
+alert("من فضلك اختر صورة فقط.");
+
+this.value="";
+
+return;
+
+}
+
+const reader =
+new FileReader();
+
+reader.onload =
+function(event){
+
+receiptPreview.src =
+event.target.result;
+
+receiptPreview.style.display =
+"block";
+
+receiptText.textContent =
+"✓ تم اختيار صورة الإيصال";
+
+receiptSuccess.textContent =
+"الصورة جاهزة للإرسال";
+
+};
+
+reader.readAsDataURL(file);
+
+});
+
+
+/* ================= COPY INSTAPAY ================= */
+
+const copyInstapay =
+document.getElementById("copyInstapay");
+
+copyInstapay.addEventListener(
+"click",
+async function(){
+
+const number =
+"+20 1100258950";
+
+try{
+
+await navigator.clipboard.writeText(number);
+
+this.textContent =
+"✓ تم نسخ الرقم";
+
+setTimeout(()=>{
+
+this.textContent =
+"📋 نسخ الرقم";
+
+},2000);
+
+}catch(error){
+
+alert(
+"رقم InstaPay: " + number
+);
+
+}
+
+});
+
+
+/* ================= TEACHER FILTER ================= */
+
+const teacherFilter =
+document.getElementById("teacherFilter");
+
+const teacherItems =
+document.querySelectorAll(".teacher-item");
+
+teacherFilter.addEventListener(
+"change",
+function(){
+
+const selected =
+this.value;
+
+teacherItems.forEach(item=>{
+
+if(
+selected==="all" ||
+item.dataset.specialty===selected
+){
+
+item.style.display =
+"block";
+
+}else{
+
+item.style.display =
+"none";
+
+}
+
+});
+
+});
+
+
+/* ================= TEACHER FORM ================= */
+
+const teacherForm =
+document.getElementById("teacherForm");
+
+teacherForm.addEventListener(
+"submit",
+function(event){
+
+event.preventDefault();
+
+const name =
+document.getElementById("teacherName").value;
+
+const phone =
+document.getElementById("teacherPhone").value;
+
+const email =
+document.getElementById("teacherEmail").value;
+
+const specialty =
+document.getElementById("teacherSpecialty").value;
+
+const experience =
+document.getElementById("teacherExperience").value;
+
+const qualifications =
+document.getElementById("teacherQualifications").value;
+
+const bio =
+document.getElementById("teacherBio").value;
+
+const message =
+`طلب انضمام إلى فريق Asmaa Kids 🌸
+
+👤 الاسم:
+${name}
+
+📱 الهاتف:
+${phone}
+
+📧 البريد:
+${email}
+
+📚 التخصص:
+${specialty}
+
+⏳ سنوات الخبرة:
+${experience}
+
+🎓 المؤهلات:
+${qualifications}
+
+📝 النبذة:
+${bio}
+
+📸 تم اختيار صورة:
+${teacherPhoto.files.length ? "نعم" : "لا"}
+
+أرجو مراجعة الطلب والتواصل معي.`;
+
+const url =
+"https://wa.me/201100258950?text="
++encodeURIComponent(message);
+
+window.open(url,"_blank");
+
+});
+
+
+/* ================= STUDENT FORM ================= */
+
+const studentForm =
+document.getElementById("studentForm");
+
+studentForm.addEventListener(
+"submit",
+function(event){
+
+event.preventDefault();
+
+const student =
+document.getElementById("studentName").value;
+
+const parent =
+document.getElementById("parentName").value;
+
+const phone =
+document.getElementById("studentPhone").value;
+
+const program =
+document.getElementById("studentProgram").value;
+
+const packageName =
+document.getElementById("studentPackage").value;
+
+const age =
+document.getElementById("studentAge").value;
+
+const notes =
+document.getElementById("studentNotes").value;
+
+const message =
+`طلب تسجيل طالب في Asmaa Kids 🌸
+
+👦 الطالب:
+${student}
+
+👨‍👩‍👦 ولي الأمر:
+${parent}
+
+📱 الهاتف:
+${phone}
+
+🎂 العمر:
+${age}
+
+📚 البرنامج:
+${program}
+
+💰 الباقة:
+${packageName}
+
+📝 الملاحظات:
+${notes}
+
+أرغب في إتمام التسجيل.`;
+
+const url =
+"https://wa.me/201100258950?text="
++encodeURIComponent(message);
+
+window.open(url,"_blank");
+
+});
+
+
+/* ================= PAYMENT FORM ================= */
+
+const paymentForm =
+document.getElementById("paymentForm");
+
+
+paymentForm.addEventListener(
+"submit",
+async function(event){
+
+event.preventDefault();
+
+const student =
+document.getElementById("paymentStudent").value;
+
+const parent =
+document.getElementById("paymentParent").value;
+
+const phone =
+document.getElementById("paymentPhone").value;
+
+const packageName =
+document.getElementById("paymentPackage").value;
+
+const receipt =
+receiptInput.files[0];
+
+
+if(!receipt){
+
+alert(
+"من فضلك اختر صورة إيصال التحويل."
+);
+
+return;
+
+}
+
+
+const message =
+`تأكيد دفع Asmaa Kids 💳
+
+👦 الطالب:
+${student}
+
+👨‍👩‍👦 ولي الأمر:
+${parent}
+
+📱 الهاتف:
+${phone}
+
+💰 الباقة:
+${packageName}
+
+🧾 إيصال التحويل مرفق.`;
+
+
+
+/*
+   نحاول مشاركة الصورة نفسها
+   من الهاتف مع بيانات الدفع.
+*/
+
+if(
+navigator.share &&
+navigator.canShare &&
+navigator.canShare({
+files:[receipt]
+})
+){
+
+try{
+
+await navigator.share({
+
+title:
+"إيصال دفع Asmaa Kids",
+
+text:
+message,
+
+files:[
+receipt
+]
+
+});
+
+return;
+
+}catch(error){
+
+if(
+error.name === "AbortError"
+){
+
+return;
+
+}
+
+}
+
+}
+
+
+/*
+   لو المتصفح لا يدعم مشاركة الملفات،
+   نفتح واتساب بالبيانات.
+*/
+
+const whatsappURL =
+"https://wa.me/201100258950?text="
++
+encodeURIComponent(
+message +
+"\n\n📸 من فضلك أرفق صورة الإيصال في المحادثة."
+);
+
+window.open(
+whatsappURL,
+"_blank"
+);
+
+});
+
+
+/* ================= LOGIN ================= */
+
+const loginForm =
+document.getElementById("loginForm");
+
+loginForm.addEventListener(
+"submit",
+function(event){
+
+event.preventDefault();
+
+alert(
+"نظام تسجيل الدخول الحقيقي يحتاج إلى قاعدة بيانات وخادم Backend."
+);
+
+});
+
+
+/* ================= SCROLL REVEAL ================= */
+
+const observer =
+new IntersectionObserver(
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},
+{
+threshold:.12
+}
+);
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(element=>{
+
+observer.observe(element);
+
+});
+
+</script>
+
+</body>
+</html>
